@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-iq3t5!osssl7^zkl5ks*^l%kw))9i@!gp!ciqiu+d3vkni7^13
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://imdbfilmreviewclassifier.herokuapp.com/', '*']
+ALLOWED_HOSTS = ['https://imdbfilmreviewclassifier.herokuapp.com/', '.herokuapp.com']
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
