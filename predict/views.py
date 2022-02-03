@@ -3,6 +3,7 @@ from django.http import JsonResponse
 from pandas import read_pickle
 from .models import PredResults
 from sklearn.feature_extraction.text import TfidfVectorizer
+import os
 
 
 def predict(request):
@@ -31,6 +32,8 @@ def predict_chances(request):
         PredResults.objects.create(review=review,
                                    tone_classification=tone_classification,
                                    score_classification=score_classification)
+
+        print(os.environ.get('NAME'))
 
         return JsonResponse({'tone_result': tone_classification,
                              "score_result": score_classification,
