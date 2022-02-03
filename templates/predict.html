@@ -56,8 +56,8 @@
             },
             success:function(json) {
                 document.forms["post-form"].reset();
-                document.getElementById("tone_prediction").innerHTML = json['result']
-                document.getElementById("score_prediction").innerHTML = json['result']
+                document.getElementById("tone_prediction").innerHTML = json['tone_result']
+                document.getElementById("score_prediction").innerHTML = json['score_result']
                 document.getElementById("sl").innerHTML = json['review']
             },
             error : function(xhr,errmsg,err) {
