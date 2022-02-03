@@ -94,11 +94,12 @@ WSGI_APPLICATION = 'ATOM_test_problem.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'mydb1',
-        'USER': 'user1',
-        'PASSWORD': '12321',
-        'HOST': 'localhost',
-        'PORT': '5432'
+        'NAME': os.environ.get('NAME') or 'mydb1',
+        'USER': os.environ.get('USER') or 'user1',
+        'PASSWORD': os.environ.get('PASSWORD') or '12321',
+        'HOST': os.environ.get('HOST') or 'localhost',
+        'PORT': os.environ.get('PORT') or '5432',
+        #'PORT' : os.environ['PORT'] if ... != None else '5432'
     }
 }
 
