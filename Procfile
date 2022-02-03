@@ -1,1 +1,1 @@
-web: gunicorn ATOM_test_problem.wgsi
+web: gunicorn ATOM_test_problem.wsgi
