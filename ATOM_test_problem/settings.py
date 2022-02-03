@@ -27,8 +27,14 @@ SECRET_KEY = 'django-insecure-iq3t5!osssl7^zkl5ks*^l%kw))9i@!gp!ciqiu+d3vkni7^13
 DEBUG = False
 
 ALLOWED_HOSTS = ['https://imdbfilmreviewclassifier.herokuapp.com/', '.herokuapp.com']
+
+STATIC_URL = '/static/'
+
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'predict/static')
+)
 
 # Application definition
 
@@ -43,8 +49,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
+    'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
