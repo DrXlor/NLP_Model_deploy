@@ -82,15 +82,16 @@ WSGI_APPLICATION = 'ATOM_test_problem.wsgi.application'
 # }
 
 DATABASES = {
-   'default': {
-       dj_database_url.config(default=os.environ.get('DATABASE_URL'))
+   'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
+#    {
+#       'DATABASE_URL': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
 #        'ENGINE': 'django.db.backends.postgresql',
 #        'NAME': os.environ.get('NAME') or 'mydb1',
 #        'USER': os.environ.get('USER') or 'user1',
 #        'PASSWORD': os.environ.get('PASSWORD') or '12321',
 #        'HOST': os.environ.get('HOST') or 'localhost',
 #        'PORT': os.environ.get('PORT') or '5432',
-    }
+#    }
 }
 
 
