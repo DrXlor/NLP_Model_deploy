@@ -32,10 +32,6 @@ STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'predict/static'),
-)
-
 CORS_ORIGIN_ALLOW_ALL = True
 
 # Application definition
