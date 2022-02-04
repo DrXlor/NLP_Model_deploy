@@ -3,7 +3,7 @@ from django.db import models
 
 class PredResults(models.Model):
 
-    review = models.CharField(max_length=200)
+    review = models.CharField(max_length=2000)
     tone_classification = models.CharField(max_length=30)
     score_classification = models.CharField(max_length=30)
 
